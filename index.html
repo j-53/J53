@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J53 - Plateforme d'Exercices</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --primary-dark: #385682;
+            --bg: #f4f7f6;
+            --card-bg: #ffffff;
+            --text: #2c3e50;
+            --success: #27ae60;
+            --error: #c0392b;
+            --border: #dcdfe6;
+            --hint-bg: #fef9e7;
+            --hint-border: #f9e79f;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        h1 { font-size: 1.3rem; color: var(--primary); text-align: center; margin-bottom: 20px; }
+
+        /* Menu de sélection */
+        .category-title {
+            font-size: 1.05rem;
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin: 15px 0 8px 0;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 4px;
+        }
+
+        .menu-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 15px; }
+
+        .menu-btn {
+            padding: 14px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: var(--text);
+            background-color: #f0f4f9;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-btn:active { background-color: #e2e9f3; }
+
+        /* Barre supérieure et progression */
+        .quiz-top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .btn-home { background: #e5e9f0; border: none; padding: 6px 12px; border-radius: 8px; font-size: 0.85rem; font-weight: bold; color: var(--text); cursor: pointer; }
+
+        .progress-header { display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: bold; color: var(--primary); margin-bottom: 6px; }
+        .progress-bar-bg { width: 100%; height: 10px; background-color: #e0e0e0; border-radius: 5px; overflow: hidden; margin-bottom: 15px; }
+        .progress-bar-fill { height: 100%; width: 0%; background-color: var(--primary); transition: width 0.3s ease; }
+
+        /* Question & Ligne */
+        .sentence-wrapper { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+        .sentence { font-size: 1.1rem; line-height: 1.6; flex: 1; }
+        select { font-size: 1rem; padding: 4px 8px; border: 2px solid var(--primary); border-radius: 6px; background-color: #fff; color: var(--text); outline: none; margin: 0 4px; }
+
+        .btn-hint { background: #fdf2e9; border: 1px solid #f39c12; color: #d68910; width: 36px; height: 36px; border-radius: 50%; font-weight: bold; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .hint-box { display: none; background-color: var(--hint-bg); border: 1px solid var(--hint-border); padding: 10px; border-radius: 8px; font-size: 0.88rem; color: #7d6608; margin-bottom: 10px; }
+
+        /* Audio Control */
+        .audio-controls { display: flex; gap: 10px; margin-bottom: 10px; }
+        .btn-audio { flex: 1; background: #eef2f7; border: 1px solid var(--primary); color: var(--primary-dark); padding: 8px; border-radius: 20px; font-size: 0.9rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+
+        /* Feedback */
+        .feedback { margin-top: 10px; padding: 10px; border-radius: 8px; font-size: 0.9rem; display: none; line-height: 1.4; }
+        .feedback.correct { display: block; background-color: #e8f8f0; color: var(--success); border: 1px solid #abebc6; }
+        .feedback.incorrect { display: block; background-color: #fadbd8; color: var(--error); border: 1px solid #f5b7b1; }
+        .explanation { margin-top: 4px; font-size: 0.85rem; color: #444; font-style: italic; }
+
+        /* Boutons d'action */
+        .btn-group { display: flex; gap: 10px; margin-top: 15px; }
+        button.btn-main { flex: 2; padding: 12px; font-size: 1rem; font-weight: bold; color: white; background-color: var(--primary); border: none; border-radius: 10px; cursor: pointer; }
+        button.btn-sec { flex: 1; padding: 12px; font-size: 0.95rem; font-weight: bold; color: var(--text); background-color: #e5e9f0; border: none; border-radius: 10px; cursor: pointer; }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        /* Page Corrigé */
+        .score-display { font-size: 1.8rem; font-weight: bold; text-align: center; color: var(--primary); background: #eef2f7; padding: 15px; border-radius: 12px; margin-bottom: 15px; }
+        .summary-card { background: #fafafa; border: 1px solid var(--border); padding: 10px; border-radius: 8px; margin-bottom: 10px; line-height: 1.4; font-size: 0.9rem; }
+        .correct-text { color: var(--success); font-weight: bold; }
+        .user-wrong { color: var(--error); text-decoration: line-through; margin-right: 6px; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .btn-group, .btn-home { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="menu-view">
+        <h1>J53 - Exercices</h1>
+        <div id="menu-container">Chargement des catégories...</div>
+    </div>
+
+    <div id="quiz-view" style="display: none;">
+        <div class="quiz-top-bar">
+            <button class="btn-home" onclick="retourMenu()">🏠 Accueil</button>
+            <span id="quiz-title" style="font-size: 0.85rem; font-weight: bold; color:#666;"></span>
+        </div>
+
+        <div class="progress-header">
+            <span id="progress-text">Question 1 / 1</span>
+        </div>
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+
+        <div class="question-card">
+            <div class="sentence-wrapper">
+                <div class="sentence" id="sentence-container"></div>
+                <button class="btn-hint" id="btn-hint" onclick="toggleHint()" title="Indice">?</button>
+            </div>
+            <div class="hint-box" id="hint-box"></div>
+            
+            <div class="audio-controls">
+                <button class="btn-audio" onclick="lirePhrase(1.0)">Lire 🐇</button>
+                <button class="btn-audio" onclick="lirePhrase(0.3)">Lire 🐢</button>
+            </div>
+
+            <div class="feedback" id="feedback-box"></div>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn-sec" id="btn-prev" onclick="prevQuestion()">Précédent</button>
+            <button class="btn-sec" id="btn-skip" onclick="nextQuestion()">Passer</button>
+            <button class="btn-main" id="btn-action" onclick="actionQuestion()">Valider</button>
+        </div>
+    </div>
+
+    <div id="recap-view" style="display: none;">
+        <h2 style="text-align: center; color: var(--primary); margin-bottom: 10px; font-size: 1.1rem;">Corrigé complet</h2>
+        <div class="score-display" id="score-display">Score : 0 / 0</div>
+        <div id="recap-content"></div>
+        <div class="btn-group">
+            <button class="btn-sec" onclick="window.print()">🖨️ Imprimer</button>
+            <button class="btn-main" onclick="retourMenu()">Accueil</button>
+        </div>
+    </div>
+</div>
+
+<script>
+let catalogueData = [];
+let currentExo = null;
+let currentIndex = 0;
+let userAnswers = [];
+let validatedState = [];
+
+async function chargerCatalogue() {
+    try {
+        const response = await fetch('catalogue.json');
+        if (!response.ok) throw new Error("Catalogue introuvable");
+        catalogueData = await response.json();
+        afficherMenu();
+    } catch (e) {
+        document.getElementById('menu-container').innerHTML = `<p style="color:var(--error); text-align:center;">Erreur de chargement du catalogue J53.</p>`;
+    }
+}
+
+function afficherMenu() {
+    const container = document.getElementById('menu-container');
+    container.innerHTML = '';
+
+    catalogueData.forEach(cat => {
+        let html = `<div class="category-title">${cat.nomCategorie}</div><div class="menu-list">`;
+        cat.exercices.forEach(exo => {
+            html += `
+                <button class="menu-btn" onclick="lancerExercice('${exo.fichier}')">
+                    <span>${exo.titre}</span>
+                    <span>▶</span>
+                </button>
+            `;
+        });
+        html += `</div>`;
+        container.innerHTML += html;
+    });
+}
+
+async function lancerExercice(filePath) {
+    try {
+        const response = await fetch(filePath);
+        if (!response.ok) throw new Error("Fichier exercice introuvable");
+        currentExo = await response.json();
+        
+        currentIndex = 0;
+        userAnswers = new Array(currentExo.questions.length).fill("");
+        validatedState = new Array(currentExo.questions.length).fill(false);
+
+        document.getElementById('menu-view').style.display = 'none';
+        document.getElementById('recap-view').style.display = 'none';
+        document.getElementById('quiz-view').style.display = 'block';
+        document.getElementById('quiz-title').innerText = currentExo.title;
+
+        showQuestion(0);
+    } catch (e) {
+        alert("Impossible de charger cet exercice.");
+    }
+}
+
+function showQuestion(index) {
+    const q = currentExo.questions[index];
+    
+    document.getElementById('progress-text').innerText = `Question ${index + 1} / ${currentExo.questions.length}`;
+    document.getElementById('progress-fill').style.width = `${((index + 1) / currentExo.questions.length) * 100}%`;
+
+    const parts = q.text.split('[GAP]');
+    let selectHTML = `<select id="current-select"><option value="">...</option>`;
+    q.options.forEach(opt => {
+        const selected = userAnswers[index] === opt ? 'selected' : '';
+        selectHTML += `<option value="${opt}" ${selected}>${opt}</option>`;
+    });
+    selectHTML += `</select>`;
+
+    document.getElementById('sentence-container').innerHTML = parts[0] + selectHTML + parts[1];
+    document.getElementById('btn-prev').disabled = (index === 0);
+
+    const hintBtn = document.getElementById('btn-hint');
+    const hintBox = document.getElementById('hint-box');
+    if (q.hint) {
+        hintBtn.style.display = 'flex';
+        hintBox.style.display = 'none';
+        hintBox.innerText = `💡 Indice : ${q.hint}`;
+    } else {
+        hintBtn.style.display = 'none';
+        hintBox.style.display = 'none';
+    }
+    
+    const feedbackBox = document.getElementById('feedback-box');
+    const actionBtn = document.getElementById('btn-action');
+
+    if (validatedState[index]) {
+        showFeedback(index);
+        actionBtn.innerText = (index === currentExo.questions.length - 1) ? "Voir le corrigé" : "Suivant";
+    } else {
+        feedbackBox.style.display = 'none';
+        actionBtn.innerText = "Valider";
+    }
+}
+
+function toggleHint() {
+    const hintBox = document.getElementById('hint-box');
+    hintBox.style.display = (hintBox.style.display === 'none' || hintBox.style.display === '') ? 'block' : 'none';
+}
+
+function lirePhrase(speed) {
+    const q = currentExo.questions[currentIndex];
+    const selectElem = document.getElementById('current-select');
+    const word = selectElem ? selectElem.value : "...";
+    const text = q.text.replace('[GAP]', word || "...");
+
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'fr-FR';
+        utterance.rate = speed;
+        window.speechSynthesis.speak(utterance);
+    }
+}
+
+function actionQuestion() {
+    const selectElem = document.getElementById('current-select');
+    const selectedVal = selectElem.value;
+
+    if (!validatedState[currentIndex]) {
+        if (!selectedVal) { alert("Veuillez sélectionner une réponse."); return; }
+        userAnswers[currentIndex] = selectedVal;
+        validatedState[currentIndex] = true;
+        
+        showFeedback(currentIndex);
+        
+        if (selectedVal === currentExo.questions[currentIndex].ans && typeof confetti === 'function') {
+            confetti({ particleCount: 80, spread: 60, origin: { y: 0.7 } });
+        }
+
+        const actionBtn = document.getElementById('btn-action');
+        actionBtn.innerText = (currentIndex === currentExo.questions.length - 1) ? "Voir le corrigé" : "Suivant";
+    } else {
+        nextQuestion();
+    }
+}
+
+function showFeedback(index) {
+    const q = currentExo.questions[index];
+    const userVal = userAnswers[index];
+    const feedbackBox = document.getElementById('feedback-box');
+
+    if (userVal === q.ans) {
+        feedbackBox.className = "feedback correct";
+        feedbackBox.innerHTML = `<strong>Bravo ! 🎉</strong> C'est la bonne réponse.`;
+    } else {
+        feedbackBox.className = "feedback incorrect";
+        feedbackBox.innerHTML = `<strong>Attention :</strong> La bonne réponse est <strong>${q.ans}</strong>.<div class="explanation">Explication : ${q.exp}</div>`;
+    }
+}
+
+function nextQuestion() {
+    if (currentIndex < currentExo.questions.length - 1) { currentIndex++; showQuestion(currentIndex); }
+    else { showRecap(); }
+}
+
+function prevQuestion() {
+    if (currentIndex > 0) { currentIndex--; showQuestion(currentIndex); }
+}
+
+function showRecap() {
+    document.getElementById('quiz-view').style.display = 'none';
+    document.getElementById('recap-view').style.display = 'block';
+
+    let score = 0;
+    currentExo.questions.forEach((q, idx) => { if (userAnswers[idx] === q.ans) score++; });
+    document.getElementById('score-display').innerText = `Score : ${score} / ${currentExo.questions.length}`;
+
+    const recapContent = document.getElementById('recap-content');
+    recapContent.innerHTML = '';
+
+    currentExo.questions.forEach((q, idx) => {
+        const userVal = userAnswers[idx];
+        const isCorrect = userVal === q.ans;
+        
+        let answerDisplay = isCorrect ? `<span class="correct-text">${q.ans}</span>` : `<span class="user-wrong">${userVal || '(non répondu)'}</span> <span class="correct-text">${q.ans}</span>`;
+        let fullSentence = q.text.replace('[GAP]', answerDisplay);
+
+        let detailsHTML = "";
+        if (!isCorrect) {
+            let hintPart = q.hint ? `<div style="color: #7d6608; margin-top: 2px;">💡 Indice : ${q.hint}</div>` : "";
+            detailsHTML = `${hintPart}<div class="explanation" style="margin-top: 2px;">📖 Explication : ${q.exp}</div>`;
+        }
+
+        recapContent.innerHTML += `<div class="summary-card"><div><strong>${idx + 1}.</strong> ${fullSentence}</div>${detailsHTML}</div>`;
+    });
+}
+
+function retourMenu() {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    document.getElementById('recap-view').style.display = 'none';
+    document.getElementById('quiz-view').style.display = 'none';
+    document.getElementById('menu-view').style.display = 'block';
+}
+
+chargerCatalogue();
+</script>
+
+</body>
+</html>

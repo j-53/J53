@@ -1,0 +1,20 @@
+[
+  {
+    "nomCategorie": "Français",
+    "exercices": [
+      {
+        "titre": "Conjugaison : Le verbe Avoir",
+        "fichier": "francais/conjugaison/verbe-avoir.json"
+      }
+    ]
+  },
+  {
+    "nomCategorie": "Code de la Route",
+    "exercices": [
+      {
+        "titre": "Priorités : La priorité à droite",
+        "fichier": "code-de-la-route/priorites/priorite-droite.json"
+      }
+    ]
+  }
+]

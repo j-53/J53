@@ -1,0 +1,13 @@
+{
+  "title": "Le verbe Avoir au présent",
+  "questions": [
+    {
+      "id": 1,
+      "text": "J'[GAP] un nouveau vélo bleu.",
+      "options": ["ai", "as", "a"],
+      "ans": "ai",
+      "hint": "Regarde le pronom 'J''. C'est la 1ère personne du singulier.",
+      "exp": "Au présent, le verbe avoir s'écrit 'ai' avec 'J''."
+    }
+  ]
+}

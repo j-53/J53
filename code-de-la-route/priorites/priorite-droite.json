@@ -1,0 +1,13 @@
+{
+  "title": "Règles de priorité à droite",
+  "questions": [
+    {
+      "id": 1,
+      "text": "En l'absence de signalisation, je dois céder le passage à [GAP].",
+      "options": ["gauche", "droite", "en face"],
+      "ans": "droite",
+      "hint": "C'est la règle de base en France lorsqu'il n'y a pas de panneau.",
+      "exp": "La règle générale est la priorité à droite."
+    }
+  ]
+}

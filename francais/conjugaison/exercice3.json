@@ -1,0 +1,45 @@
+{
+  "title": "Exercice 3 : Être ou Avoir ?",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Tu [GAP] un super chat.",
+      "options": ["es", "as"],
+      "ans": "as",
+      "hint": "On possède quelque chose (le chat), quel verbe utilise-t-on pour la possession ?",
+      "exp": "On utilise le verbe avoir : 'Tu as un super chat'."
+    },
+    {
+      "id": 2,
+      "text": "Je [GAP] fatigué ce soir.",
+      "options": ["suis", "ai"],
+      "ans": "suis",
+      "hint": "C'est un état dans lequel on se trouve.",
+      "exp": "On utilise le verbe être : 'Je suis fatigué'."
+    },
+    {
+      "id": 3,
+      "text": "Nous [GAP] une belle voiture.",
+      "options": ["sommes", "avons"],
+      "ans": "avons",
+      "hint": "Il s'agit d'une possession.",
+      "exp": "On utilise le verbe avoir : 'Nous avons une belle voiture'."
+    },
+    {
+      "id": 4,
+      "text": "Ils [GAP] très grands.",
+      "options": ["ont", "sont"],
+      "ans": "sont",
+      "hint": "C'est une description physique (un état).",
+      "exp": "On utilise le verbe être : 'Ils sont très grands'."
+    },
+    {
+      "id": 5,
+      "text": "Vous [GAP] de la chance.",
+      "options": ["êtes", "avez"],
+      "ans": "avez",
+      "hint": "On exprime le fait d'avoir de la chance.",
+      "exp": "On utilise le verbe avoir : 'Vous avez de la chance'."
+    }
+  ]
+}

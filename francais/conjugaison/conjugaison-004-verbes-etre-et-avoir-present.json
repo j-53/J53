@@ -1,0 +1,165 @@
+{
+  "title": "La conjugaison au jardin - Présent (A1)",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Le jardinier [GAP] un beau panier de tomates.",
+      "options": ["a", "ont", "avons", "ai", "as"],
+      "ans": "a",
+      "hint": "Le sujet 'Le jardinier' est singulier (il).",
+      "exp": "Avec 'il' ou 'elle', le verbe avoir au présent est 'a'."
+    },
+    {
+      "id": 2,
+      "text": "Les fraises [GAP] rouges et sucrées.",
+      "options": ["sommes", "sont", "est", "êtes", "suis"],
+      "ans": "sont",
+      "hint": "Le sujet 'Les fraises' est pluriel.",
+      "exp": "Avec le pluriel (elles), le verbe être au présent est 'sont'."
+    },
+    {
+      "id": 3,
+      "text": "Je [GAP] des graines de carottes dans la terre.",
+      "options": ["plantes", "plantons", "plante", "plantez", "plantent"],
+      "ans": "plante",
+      "hint": "Regarde le pronom 'Je'.",
+      "exp": "Pour un verbe du 1er groupe avec 'je', on ajoute un 'e'."
+    },
+    {
+      "id": 4,
+      "text": "Tu [GAP] les salades tous les soirs.",
+      "options": ["arrosez", "arrosons", "arroses", "arrose", "arrosent"],
+      "ans": "arroses",
+      "hint": "Regarde le pronom 'Tu'.",
+      "exp": "Avec le pronom 'tu', les verbes en -er prennent un '-es'."
+    },
+    {
+      "id": 5,
+      "text": "Mon jardin [GAP] grand et joli.",
+      "options": ["sommes", "est", "suis", "êtes", "sont"],
+      "ans": "est",
+      "hint": "Le sujet 'Mon jardin' correspond à 'il'.",
+      "exp": "Le verbe être au présent avec 'il' est 'est'."
+    },
+    {
+      "id": 6,
+      "text": "Nous [GAP] beaucoup de pommes sur le pommier.",
+      "options": ["avez", "ont", "avons", "as", "ai"],
+      "ans": "avons",
+      "hint": "Regarde le pronom 'Nous'.",
+      "exp": "Le verbe avoir avec 'nous' s'écrit 'avons'."
+    },
+    {
+      "id": 7,
+      "text": "Les radis [GAP] vite sous le soleil.",
+      "options": ["pousse", "pousses", "poussons", "poussez", "poussent"],
+      "ans": "poussent",
+      "hint": "Le sujet 'Les radis' est au pluriel.",
+      "exp": "Avec un sujet pluriel, les verbes du 1er groupe prennent '-ent'."
+    },
+    {
+      "id": 8,
+      "text": "Vous [GAP] des poireaux et des oignons.",
+      "options": ["cultivons", "cultive", "cultivez", "cultivent", "cultives"],
+      "ans": "cultivez",
+      "hint": "Regarde le pronom 'Vous'.",
+      "exp": "Avec le pronom 'vous', les verbes du 1er groupe se terminent par '-ez'."
+    },
+    {
+      "id": 9,
+      "text": "Est-ce que tu [GAP] des courgettes dans ton potager ?",
+      "options": ["a", "as", "ai", "avez", "ont"],
+      "ans": "as",
+      "hint": "Le pronom est 'tu'.",
+      "exp": "Le verbe avoir avec 'tu' est 'as'."
+    },
+    {
+      "id": 10,
+      "text": "On [GAP] les melons en été.",
+      "options": ["récoltes", "récoltez", "récoltent", "récoltons", "récolte"],
+      "ans": "récolte",
+      "hint": "Le pronom 'On' se conjugue comme 'il'.",
+      "exp": "Avec 'on', le verbe en -er prend un '-e'."
+    },
+    {
+      "id": 11,
+      "text": "Je [GAP] content de voir pousser mes légumes.",
+      "options": ["est", "sont", "suis", "sommes", "êtes"],
+      "ans": "suis",
+      "hint": "Le pronom personnel est 'Je'.",
+      "exp": "Le verbe être à la première personne du singulier est 'suis'."
+    },
+    {
+      "id": 12,
+      "text": "Les enfants [GAP] manger les fruits frais.",
+      "options": ["aime", "aimes", "aimons", "aimez", "aiment"],
+      "ans": "aiment",
+      "hint": "Le sujet 'Les enfants' est pluriel.",
+      "exp": "Le verbe au pluriel prend la terminaison '-ent'."
+    },
+    {
+      "id": 13,
+      "text": "J'[GAP] un bel arbre fruitier au milieu du jardin.",
+      "options": ["as", "a", "ai", "avons", "ont"],
+      "ans": "ai",
+      "hint": "Le pronom est 'J''.",
+      "exp": "Avec 'J'', le verbe avoir s'écrit 'ai'."
+    },
+    {
+      "id": 14,
+      "text": "Nous [GAP] les feuilles mortes autour des salades.",
+      "options": ["ramassent", "ramassons", "ramasses", "ramasse", "ramassez"],
+      "ans": "ramassons",
+      "hint": "Le pronom est 'Nous'.",
+      "exp": "Avec 'nous', un verbe en -er se termine par '-ons'."
+    },
+    {
+      "id": 15,
+      "text": "Vous [GAP] de bons jardiniers !",
+      "options": ["sommes", "êtes", "sont", "suis", "est"],
+      "ans": "êtes",
+      "hint": "Le pronom est 'Vous'.",
+      "exp": "Le verbe être avec 'vous' est 'êtes'."
+    },
+    {
+      "id": 16,
+      "text": "Tu [GAP] une fraise bien mûre.",
+      "options": ["goûtes", "goûtent", "goûtez", "goûtons", "goûte"],
+      "ans": "goûtes",
+      "hint": "Le pronom est 'Tu'.",
+      "exp": "Avec 'tu', le verbe du 1er groupe prend '-es'."
+    },
+    {
+      "id": 17,
+      "text": "Ce pommier [GAP] de belles pommes chaque année.",
+      "options": ["donnent", "donne", "donnes", "donnons", "donnez"],
+      "ans": "donne",
+      "hint": "Le sujet 'Ce pommier' est singulier.",
+      "exp": "Un sujet singulier prend la terminaison '-e'."
+    },
+    {
+      "id": 18,
+      "text": "Les tomates [GAP] besoin de beaucoup de soleil.",
+      "options": ["ont", "avez", "avons", "a", "ai"],
+      "ans": "ont",
+      "hint": "Le sujet 'Les tomates' est pluriel.",
+      "exp": "Le verbe avoir au pluriel s'écrit 'ont'."
+    },
+    {
+      "id": 19,
+      "text": "C'[GAP] l'heure de récolter les haricots.",
+      "options": ["sont", "sommes", "est", "suis", "êtes"],
+      "ans": "est",
+      "hint": "'C'' remplace 'cela' ou 'il'.",
+      "exp": "Avec 'C'', on utilise 'est'."
+    },
+    {
+      "id": 20,
+      "text": "Nous [GAP] une bonne soupe avec les légumes du jardin.",
+      "options": ["manges", "mangez", "mangeons", "mangent", "mange"],
+      "ans": "mangeons",
+      "hint": "Le pronom est 'Nous'. Attention à l'orthographe avec les verbes en -ger !",
+      "exp": "Avec 'nous', les verbes en -ger prennent un 'e' avant 'ons' (mangeons)."
+    }
+  ]
+}

@@ -3,8 +3,20 @@
     "nomCategorie": "Français",
     "exercices": [
       {
-        "titre": "Conjugaison : Le verbe Avoir",
+        "titre": "Le verbe Avoir",
         "fichier": "francais/conjugaison/verbe-avoir.json"
+      },
+      {
+        "titre": "Exercice 1 : Le verbe Avoir",
+        "fichier": "francais/conjugaison/exercice1.json"
+      },
+      {
+        "titre": "Exercice 2 : Le verbe Être",
+        "fichier": "francais/conjugaison/exercice2.json"
+      },
+      {
+        "titre": "Exercice 3 : Être ou Avoir ?",
+        "fichier": "francais/conjugaison/exercice3.json"
       }
     ]
   },

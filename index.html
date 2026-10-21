@@ -79,7 +79,19 @@
 
         .sentence-wrapper { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
         .sentence { font-size: 1.1rem; line-height: 1.6; flex: 1; }
-        select { font-size: 1rem; padding: 4px 8px; border: 2px solid var(--primary); border-radius: 6px; background-color: #fff; color: var(--text); outline: none; margin: 0 4px; }
+        
+        select, input[type="text"].gap-input {
+            font-size: 1rem;
+            padding: 6px 10px;
+            border: 2px solid var(--primary);
+            border-radius: 6px;
+            background-color: #fff;
+            color: var(--text);
+            outline: none;
+            margin: 0 4px;
+            width: 110px;
+            text-align: center;
+        }
 
         .btn-hint { background: #fdf2e9; border: 1px solid #f39c12; color: #d68910; width: 36px; height: 36px; border-radius: 50%; font-weight: bold; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
         .hint-box { display: none; background-color: var(--hint-bg); border: 1px solid var(--hint-border); padding: 10px; border-radius: 8px; font-size: 0.88rem; color: #7d6608; margin-bottom: 10px; }
@@ -170,7 +182,6 @@ let currentIndex = 0;
 let userAnswers = [];
 let validatedState = [];
 
-// Analyse automatique de l'arborescence GitHub via l'API
 async function chargerCatalogue() {
     try {
         const response = await fetch('https://api.github.com/repos/j-53/J53/git/trees/main?recursive=1');
@@ -263,14 +274,22 @@ function showQuestion(index) {
     document.getElementById('progress-fill').style.width = `${((index + 1) / currentExo.questions.length) * 100}%`;
 
     const parts = q.text.split('[GAP]');
-    let selectHTML = `<select id="current-select"><option value="">...</option>`;
-    q.options.forEach(opt => {
-        const selected = userAnswers[index] === opt ? 'selected' : '';
-        selectHTML += `<option value="${opt}" ${selected}>${opt}</option>`;
-    });
-    selectHTML += `</select>`;
+    let gapHTML = "";
 
-    document.getElementById('sentence-container').innerHTML = parts[0] + selectHTML + parts[1];
+    // S'il y a des options, on génère un <select>, sinon un <input type="text">
+    if (q.options && Array.isArray(q.options) && q.options.length > 0) {
+        gapHTML = `<select id="user-input"><option value="">...</option>`;
+        q.options.forEach(opt => {
+            const selected = userAnswers[index] === opt ? 'selected' : '';
+            gapHTML += `<option value="${opt}" ${selected}>${opt}</option>`;
+        });
+        gapHTML += `</select>`;
+    } else {
+        const currentVal = userAnswers[index] || "";
+        gapHTML = `<input type="text" id="user-input" class="gap-input" value="${currentVal}" placeholder="..." autocomplete="off" autocorrect="off" autocapitalize="none">`;
+    }
+
+    document.getElementById('sentence-container').innerHTML = parts[0] + gapHTML + parts[1];
     document.getElementById('btn-prev').disabled = (index === 0);
 
     const hintBtn = document.getElementById('btn-hint');
@@ -301,10 +320,18 @@ function toggleHint() {
     hintBox.style.display = (hintBox.style.display === 'none' || hintBox.style.display === '') ? 'block' : 'none';
 }
 
+function getUserInputValue() {
+    const elem = document.getElementById('user-input');
+    return elem ? elem.value.trim() : "";
+}
+
+function estReponseCorrecte(userVal, ans) {
+    return userVal.toLowerCase() === ans.trim().toLowerCase();
+}
+
 function lirePhrase(speed) {
     const q = currentExo.questions[currentIndex];
-    const selectElem = document.getElementById('current-select');
-    const word = selectElem ? selectElem.value : "...";
+    const word = getUserInputValue();
     const text = q.text.replace('[GAP]', word || "...");
 
     if ('speechSynthesis' in window) {
@@ -317,17 +344,16 @@ function lirePhrase(speed) {
 }
 
 function actionQuestion() {
-    const selectElem = document.getElementById('current-select');
-    const selectedVal = selectElem.value;
+    const selectedVal = getUserInputValue();
 
     if (!validatedState[currentIndex]) {
-        if (!selectedVal) { alert("Veuillez sélectionner une réponse."); return; }
+        if (!selectedVal) { alert("Veuillez remplir le champ avant de valider."); return; }
         userAnswers[currentIndex] = selectedVal;
         validatedState[currentIndex] = true;
         
         showFeedback(currentIndex);
         
-        if (selectedVal === currentExo.questions[currentIndex].ans && typeof confetti === 'function') {
+        if (estReponseCorrecte(selectedVal, currentExo.questions[currentIndex].ans) && typeof confetti === 'function') {
             confetti({ particleCount: 80, spread: 60, origin: { y: 0.7 } });
         }
 
@@ -343,7 +369,7 @@ function showFeedback(index) {
     const userVal = userAnswers[index];
     const feedbackBox = document.getElementById('feedback-box');
 
-    if (userVal === q.ans) {
+    if (estReponseCorrecte(userVal, q.ans)) {
         feedbackBox.className = "feedback correct";
         feedbackBox.innerHTML = `<strong>Bravo ! 🎉</strong> C'est la bonne réponse.`;
     } else {
@@ -366,7 +392,7 @@ function showRecap() {
     document.getElementById('recap-view').style.display = 'block';
 
     let score = 0;
-    currentExo.questions.forEach((q, idx) => { if (userAnswers[idx] === q.ans) score++; });
+    currentExo.questions.forEach((q, idx) => { if (estReponseCorrecte(userAnswers[idx], q.ans)) score++; });
     document.getElementById('score-display').innerText = `Score : ${score} / ${currentExo.questions.length}`;
 
     const recapContent = document.getElementById('recap-content');
@@ -374,7 +400,7 @@ function showRecap() {
 
     currentExo.questions.forEach((q, idx) => {
         const userVal = userAnswers[idx];
-        const isCorrect = userVal === q.ans;
+        const isCorrect = estReponseCorrecte(userVal, q.ans);
         
         let answerDisplay = isCorrect ? `<span class="correct-text">${q.ans}</span>` : `<span class="user-wrong">${userVal || '(non répondu)'}</span> <span class="correct-text">${q.ans}</span>`;
         let fullSentence = q.text.replace('[GAP]', answerDisplay);
@@ -398,6 +424,5 @@ function retourMenu() {
 
 chargerCatalogue();
 </script>
-
 </body>
 </html>

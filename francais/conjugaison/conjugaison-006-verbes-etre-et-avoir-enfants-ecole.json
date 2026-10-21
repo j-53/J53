@@ -67,4 +67,99 @@
     },
     {
       "id": 9,
-      "text": "Est-ce
+      "text": "Est-ce que tu [GAP] prêt pour l'exercice ?",
+      "options": ["es", "est", "suis", "sommes", "êtes"],
+      "ans": "es",
+      "hint": "Le pronom est 'tu'.",
+      "exp": "Le verbe être avec le pronom 'tu' s'écrit 'es'."
+    },
+    {
+      "id": 10,
+      "text": "On [GAP] toujours content de retrouver ses camarades.",
+      "options": ["est", "suis", "sommes", "êtes", "sont"],
+      "ans": "est",
+      "hint": "Le pronom 'On' se conjugue comme 'il'.",
+      "exp": "Avec 'on', le verbe être au présent est 'est'."
+    },
+    {
+      "id": 11,
+      "text": "J'[GAP] un dessin à terminer en art plastique.",
+      "options": ["ai", "as", "a", "avons", "ont"],
+      "ans": "ai",
+      "hint": "Le pronom est 'J''.",
+      "exp": "Avec 'J'', le verbe avoir s'écrit 'ai'."
+    },
+    {
+      "id": 12,
+      "text": "Les écoliers [GAP] une pause à dix heures.",
+      "options": ["ont", "a", "as", "ai", "avons"],
+      "ans": "ont",
+      "hint": "Le sujet 'Les écoliers' est au pluriel (ils).",
+      "exp": "Le verbe avoir au pluriel avec 'ils' s'écrit 'ont'."
+    },
+    {
+      "id": 13,
+      "text": "Vous [GAP] en retard pour la classe de musique.",
+      "options": ["êtes", "sommes", "sont", "suis", "est"],
+      "ans": "êtes",
+      "hint": "Le pronom est 'Vous'.",
+      "exp": "Le verbe être avec le pronom 'vous' est 'êtes'."
+    },
+    {
+      "id": 14,
+      "text": "Nous [GAP] calmes pendant l'histoire racontée par le maître.",
+      "options": ["sommes", "êtes", "sont", "suis", "est"],
+      "ans": "sommes",
+      "hint": "Le pronom est 'Nous'.",
+      "exp": "Le verbe être avec 'nous' s'écrit 'sommes'."
+    },
+    {
+      "id": 15,
+      "text": "Les fillettes [GAP] envie de jouer au ballon.",
+      "options": ["ont", "avez", "avons", "a", "ai"],
+      "ans": "ont",
+      "hint": "Le sujet 'Les fillettes' est au pluriel (elles).",
+      "exp": "Le verbe avoir avec le pronom 'elles' est 'ont'."
+    },
+    {
+      "id": 16,
+      "text": "Tu [GAP] le délégué de la classe cette année.",
+      "options": ["es", "est", "suis", "sommes", "êtes"],
+      "ans": "es",
+      "hint": "Le pronom est 'Tu'.",
+      "exp": "Avec 'tu', le verbe être s'écrit 'es'."
+    },
+    {
+      "id": 17,
+      "text": "Le tableau de la classe [GAP] tout propre.",
+      "options": ["est", "sont", "suis", "sommes", "êtes"],
+      "ans": "est",
+      "hint": "Le sujet 'Le tableau' est au singulier (il).",
+      "exp": "Le verbe être avec 'il' s'écrit 'est'."
+    },
+    {
+      "id": 18,
+      "text": "Les garçons [GAP] une compétition de sport ce vendredi.",
+      "options": ["ont", "avez", "avons", "a", "ai"],
+      "ans": "ont",
+      "hint": "Le sujet 'Les garçons' est au pluriel (ils).",
+      "exp": "Le verbe avoir avec 'ils' s'écrit 'ont'."
+    },
+    {
+      "id": 19,
+      "text": "C'[GAP] l'heure de ranger le matériel.",
+      "options": ["est", "sont", "sommes", "suis", "êtes"],
+      "ans": "est",
+      "hint": "'C'' fonctionne comme le pronom 'il'.",
+      "exp": "Avec 'C'', on utilise le verbe être sous la forme 'est'."
+    },
+    {
+      "id": 20,
+      "text": "Nous [GAP] de la peinture sur nos doigts.",
+      "options": ["avons", "avez", "ont", "as", "ai"],
+      "ans": "avons",
+      "hint": "Le pronom est 'Nous'.",
+      "exp": "Le verbe avoir avec le pronom 'nous' est 'avons'."
+    }
+  ]
+}

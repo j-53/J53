@@ -1,0 +1,165 @@
+{
+  "title": "La conjugaison à la ferme - Verbes Être et Avoir au présent (A1)",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Le coq [GAP] sur le toit de la grange.",
+      "options": ["est", "sont", "suis", "sommes", "êtes"],
+      "ans": "est",
+      "hint": "Le sujet 'Le coq' est au singulier (il).",
+      "exp": "Le verbe être avec 'il' s'écrit 'est'."
+    },
+    {
+      "id": 2,
+      "text": "Les vaches [GAP] de grandes cornes.",
+      "options": ["ont", "a", "as", "ai", "avons"],
+      "ans": "ont",
+      "hint": "Le sujet 'Les vaches' est au pluriel (elles).",
+      "exp": "Le verbe avoir au présent avec 'elles' s'écrit 'ont'."
+    },
+    {
+      "id": 3,
+      "text": "Je [GAP] très doux avec le petit lapin.",
+      "options": ["suis", "est", "sont", "sommes", "êtes"],
+      "ans": "suis",
+      "hint": "Regarde le pronom 'Je'.",
+      "exp": "Le verbe être à la première personne du singulier avec 'je' est 'suis'."
+    },
+    {
+      "id": 4,
+      "text": "Tu [GAP] un beau cheval blanc.",
+      "options": ["as", "a", "ai", "avez", "ont"],
+      "ans": "as",
+      "hint": "Regarde le pronom 'Tu'.",
+      "exp": "Le verbe avoir avec le pronom 'tu' s'écrit 'as'."
+    },
+    {
+      "id": 5,
+      "text": "Le mouton [GAP] de la laine bien épaisse.",
+      "options": ["a", "ont", "avons", "ai", "as"],
+      "ans": "a",
+      "hint": "Le sujet 'Le mouton' correspond à 'il'.",
+      "exp": "Le verbe avoir au présent avec 'il' est 'a'."
+    },
+    {
+      "id": 6,
+      "text": "Nous [GAP] prudents près du taureau.",
+      "options": ["sommes", "êtes", "sont", "suis", "est"],
+      "ans": "sommes",
+      "hint": "Regarde le pronom 'Nous'.",
+      "exp": "Le verbe être avec le pronom 'nous' s'écrit 'sommes'."
+    },
+    {
+      "id": 7,
+      "text": "Les poussins [GAP] très petits et jaunes.",
+      "options": ["sont", "est", "suis", "sommes", "êtes"],
+      "ans": "sont",
+      "hint": "Le sujet 'Les poussins' est au pluriel (ils).",
+      "exp": "Avec un sujet au pluriel (ils), le verbe être s'écrit 'sont'."
+    },
+    {
+      "id": 8,
+      "text": "Vous [GAP] de la nourriture pour les cochons.",
+      "options": ["avez", "avons", "ai", "ont", "as"],
+      "ans": "avez",
+      "hint": "Regarde le pronom 'Vous'.",
+      "exp": "Le verbe avoir avec le pronom 'vous' s'écrit 'avez'."
+    },
+    {
+      "id": 9,
+      "text": "Est-ce que tu [GAP] peur des oies ?",
+      "options": ["as", "a", "ai", "avez", "ont"],
+      "ans": "as",
+      "hint": "Le pronom est 'tu'.",
+      "exp": "Le verbe avoir avec 'tu' s'écrit 'as'."
+    },
+    {
+      "id": 10,
+      "text": "On [GAP] au milieu du pré avec les chèvres.",
+      "options": ["est", "suis", "sommes", "êtes", "sont"],
+      "ans": "est",
+      "hint": "Le pronom 'On' se conjugue comme 'il'.",
+      "exp": "Avec 'on', le verbe être au présent s'écrit 'est'."
+    },
+    {
+      "id": 11,
+      "text": "J'[GAP] trois canards dans ma marre.",
+      "options": ["ai", "as", "a", "avons", "ont"],
+      "ans": "ai",
+      "hint": "Le pronom est 'J''.",
+      "exp": "Avec 'J'', le verbe avoir s'écrit 'ai'."
+    },
+    {
+      "id": 12,
+      "text": "Les poules [GAP] des œufs frais tous les matins.",
+      "options": ["ont", "a", "as", "ai", "avons"],
+      "ans": "ont",
+      "hint": "Le sujet 'Les poules' est au pluriel (elles).",
+      "exp": "Le verbe avoir avec 'elles' s'écrit 'ont'."
+    },
+    {
+      "id": 13,
+      "text": "Vous [GAP] étonnés par la taille du dindon.",
+      "options": ["êtes", "sommes", "sont", "suis", "est"],
+      "ans": "êtes",
+      "hint": "Le pronom est 'Vous'.",
+      "exp": "Le verbe être avec 'vous' s'écrit 'êtes'."
+    },
+    {
+      "id": 14,
+      "text": "Nous [GAP] beaucoup d'animaux dans notre ferme.",
+      "options": ["avons", "avez", "ont", "as", "ai"],
+      "ans": "avons",
+      "hint": "Le pronom est 'Nous'.",
+      "exp": "Le verbe avoir avec 'nous' s'écrit 'avons'."
+    },
+    {
+      "id": 15,
+      "text": "Les canetons [GAP] dans l'eau du ruisseau.",
+      "options": ["sont", "est", "suis", "sommes", "êtes"],
+      "ans": "sont",
+      "hint": "Le sujet 'Les canetons' est au pluriel (ils).",
+      "exp": "Le verbe être avec le pronom 'ils' s'écrit 'sont'."
+    },
+    {
+      "id": 16,
+      "text": "Tu [GAP] le propriétaire de ce beau chien de berger.",
+      "options": ["es", "est", "suis", "sommes", "êtes"],
+      "ans": "es",
+      "hint": "Le pronom est 'Tu'.",
+      "exp": "Avec 'tu', le verbe être s'écrit 'es'."
+    },
+    {
+      "id": 17,
+      "text": "L'âne [GAP] gris et très calme.",
+      "options": ["est", "sont", "suis", "sommes", "êtes"],
+      "ans": "est",
+      "hint": "Le sujet 'L'âne' est au singulier (il).",
+      "exp": "Le verbe être avec 'il' s'écrit 'est'."
+    },
+    {
+      "id": 18,
+      "text": "Les bébés lapins [GAP] soif après avoir couru.",
+      "options": ["ont", "avez", "avons", "a", "ai"],
+      "ans": "ont",
+      "hint": "Le sujet 'Les bébés lapins' est au pluriel (ils).",
+      "exp": "Le verbe avoir avec 'ils' s'écrit 'ont'."
+    },
+    {
+      "id": 19,
+      "text": "C'[GAP] un jeune poulain très rapide.",
+      "options": ["est", "sont", "sommes", "suis", "êtes"],
+      "ans": "est",
+      "hint": "'C'' fonctionne comme le pronom 'il'.",
+      "exp": "Avec 'C'', on utilise le verbe être sous la forme 'est'."
+    },
+    {
+      "id": 20,
+      "text": "Nous [GAP] contents de donner à manger aux chèvres.",
+      "options": ["sommes", "êtes", "sont", "suis", "est"],
+      "ans": "sommes",
+      "hint": "Le pronom est 'Nous'.",
+      "exp": "Le verbe être avec le pronom 'nous' s'écrit 'sommes'."
+    }
+  ]
+}

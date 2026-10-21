@@ -1,0 +1,165 @@
+{
+  "title": "La conjugaison à la ferme bio - Verbes Être et Avoir au présent (A1)",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Le fermier [GAP] un champ de blé biologique.",
+      "options": ["a", "ont", "avons", "ai", "as"],
+      "ans": "a",
+      "hint": "Le sujet 'Le fermier' est singulier (il).",
+      "exp": "Avec 'il' ou 'elle', le verbe avoir au présent est 'a'."
+    },
+    {
+      "id": 2,
+      "text": "Ces légumes bio [GAP] excellents pour la santé.",
+      "options": ["sommes", "sont", "est", "êtes", "suis"],
+      "ans": "sont",
+      "hint": "Le sujet 'Ces légumes bio' est pluriel (ils).",
+      "exp": "Avec le pluriel (ils), le verbe être au présent est 'sont'."
+    },
+    {
+      "id": 3,
+      "text": "Je [GAP] engagé pour le respect de la nature.",
+      "options": ["est", "sont", "suis", "sommes", "êtes"],
+      "ans": "suis",
+      "hint": "Regarde le pronom 'Je'.",
+      "exp": "Le verbe être à la première personne du singulier avec 'je' est 'suis'."
+    },
+    {
+      "id": 4,
+      "text": "Tu [GAP] du compost naturel pour le sol.",
+      "options": ["a", "as", "ai", "avez", "ont"],
+      "ans": "as",
+      "hint": "Regarde le pronom 'Tu'.",
+      "exp": "Le verbe avoir avec 'tu' s'écrit 'as'."
+    },
+    {
+      "id": 5,
+      "text": "Cette ferme [GAP] 100% biologique.",
+      "options": ["sommes", "est", "suis", "êtes", "sont"],
+      "ans": "est",
+      "hint": "Le sujet 'Cette ferme' correspond à 'elle'.",
+      "exp": "Le verbe être au présent avec 'elle' est 'est'."
+    },
+    {
+      "id": 6,
+      "text": "Nous [GAP] des poules en liberté sur le domaine.",
+      "options": ["avez", "ont", "avons", "as", "ai"],
+      "ans": "avons",
+      "hint": "Regarde le pronom 'Nous'.",
+      "exp": "Le verbe avoir avec 'nous' s'écrit 'avons'."
+    },
+    {
+      "id": 7,
+      "text": "Les engrais chimiques [GAP] interdits dans la ferme bio.",
+      "options": ["est", "suis", "sommes", "êtes", "sont"],
+      "ans": "sont",
+      "hint": "Le sujet 'Les engrais chimiques' est au pluriel (ils).",
+      "exp": "Avec un sujet pluriel (ils), le verbe être est 'sont'."
+    },
+    {
+      "id": 8,
+      "text": "Vous [GAP] un grand marché bio le samedi matin.",
+      "options": ["avons", "ai", "avez", "ont", "as"],
+      "ans": "avez",
+      "hint": "Regarde le pronom 'Vous'.",
+      "exp": "Le verbe avoir avec le pronom 'vous' est 'avez'."
+    },
+    {
+      "id": 9,
+      "text": "Est-ce que tu [GAP] passionné par l'agriculture durable ?",
+      "options": ["es", "est", "suis", "sommes", "êtes"],
+      "ans": "es",
+      "hint": "Le pronom est 'tu'.",
+      "exp": "Le verbe être avec 'tu' s'écrit 'es'."
+    },
+    {
+      "id": 10,
+      "text": "On [GAP] très attentif à la qualité de la terre.",
+      "options": ["est", "suis", "sommes", "êtes", "sont"],
+      "ans": "est",
+      "hint": "Le pronom 'On' se conjugue comme 'il'.",
+      "exp": "Avec 'on', le verbe être au présent est 'est'."
+    },
+    {
+      "id": 11,
+      "text": "J'[GAP] de la farine bio pour faire mon pain.",
+      "options": ["as", "a", "ai", "avons", "ont"],
+      "ans": "ai",
+      "hint": "Le pronom est 'J''.",
+      "exp": "Avec 'J'', le verbe avoir s'écrit 'ai'."
+    },
+    {
+      "id": 12,
+      "text": "Les insectes utiles [GAP] très importants pour les cultures.",
+      "options": ["est", "suis", "sommes", "êtes", "sont"],
+      "ans": "sont",
+      "hint": "Le sujet 'Les insectes utiles' est au pluriel (ils).",
+      "exp": "Le verbe être au pluriel avec 'ils' s'écrit 'sont'."
+    },
+    {
+      "id": 13,
+      "text": "Vous [GAP] fiers de votre production sans pesticides.",
+      "options": ["sommes", "êtes", "sont", "suis", "est"],
+      "ans": "êtes",
+      "hint": "Le pronom est 'Vous'.",
+      "exp": "Le verbe être avec 'vous' est 'êtes'."
+    },
+    {
+      "id": 14,
+      "text": "Nous [GAP] très heureux de consommer local.",
+      "options": ["êtes", "sommes", "sont", "suis", "est"],
+      "ans": "sommes",
+      "hint": "Le pronom est 'Nous'.",
+      "exp": "Le verbe être avec 'nous' s'écrit 'sommes'."
+    },
+    {
+      "id": 15,
+      "text": "Les vaches [GAP] de l'herbe fraîche dans le pré.",
+      "options": ["ont", "avez", "avons", "a", "ai"],
+      "ans": "ont",
+      "hint": "Le sujet 'Les vaches' est au pluriel (elles).",
+      "exp": "Le verbe avoir avec 'elles' est 'ont'."
+    },
+    {
+      "id": 16,
+      "text": "Tu [GAP] responsable de la récolte des pommes bio.",
+      "options": ["es", "est", "suis", "sommes", "êtes"],
+      "ans": "es",
+      "hint": "Le pronom est 'Tu'.",
+      "exp": "Avec 'tu', le verbe être s'écrit 'es'."
+    },
+    {
+      "id": 17,
+      "text": "Le sol [GAP] riche grâce à la rotation des cultures.",
+      "options": ["sont", "est", "suis", "sommes", "êtes"],
+      "ans": "est",
+      "hint": "Le sujet 'Le sol' est au singulier (il).",
+      "exp": "Le verbe être avec 'il' est 'est'."
+    },
+    {
+      "id": 18,
+      "text": "Les agriculteurs [GAP] beaucoup de travail au printemps.",
+      "options": ["ont", "avez", "avons", "a", "ai"],
+      "ans": "ont",
+      "hint": "Le sujet 'Les agriculteurs' est au pluriel (ils).",
+      "exp": "Le verbe avoir avec 'ils' s'écrit 'ont'."
+    },
+    {
+      "id": 19,
+      "text": "C'[GAP] une excellente idée d'acheter des produits bio.",
+      "options": ["sont", "sommes", "est", "suis", "êtes"],
+      "ans": "est",
+      "hint": "'C'' fonctionne comme le pronom 'il'.",
+      "exp": "Avec 'C'', on utilise le verbe être sous la forme 'est'."
+    },
+    {
+      "id": 20,
+      "text": "Nous [GAP] l'habitude de désherber à la main.",
+      "options": ["avez", "ont", "avons", "as", "ai"],
+      "ans": "avons",
+      "hint": "Le pronom est 'Nous'.",
+      "exp": "Le verbe avoir avec 'nous' est 'avons'."
+    }
+  ]
+}

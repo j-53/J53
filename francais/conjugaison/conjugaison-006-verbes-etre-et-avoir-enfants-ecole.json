@@ -1,0 +1,70 @@
+{
+  "title": "La conjugaison à l'école - Verbes Être et Avoir au présent (A1)",
+  "questions": [
+    {
+      "id": 1,
+      "text": "Les enfants [GAP] dans la cour de récréation.",
+      "options": ["sont", "est", "sommes", "êtes", "suis"],
+      "ans": "sont",
+      "hint": "Le sujet 'Les enfants' est au pluriel (ils).",
+      "exp": "Avec un sujet au pluriel (ils), le verbe être au présent s'écrit 'sont'."
+    },
+    {
+      "id": 2,
+      "text": "L'élève [GAP] un grand cahier bleu dans son sac.",
+      "options": ["a", "ont", "avons", "ai", "as"],
+      "ans": "a",
+      "hint": "Le sujet 'L'élève' est au singulier (il ou elle).",
+      "exp": "Avec 'il' ou 'elle', le verbe avoir au présent est 'a'."
+    },
+    {
+      "id": 3,
+      "text": "Je [GAP] très attentif pendant la leçon de français.",
+      "options": ["suis", "est", "sont", "sommes", "êtes"],
+      "ans": "suis",
+      "hint": "Regarde le pronom 'Je'.",
+      "exp": "Le verbe être à la première personne du singulier avec 'je' est 'suis'."
+    },
+    {
+      "id": 4,
+      "text": "Tu [GAP] de nombreux stylos de couleurs.",
+      "options": ["as", "a", "ai", "avez", "ont"],
+      "ans": "as",
+      "hint": "Regarde le pronom 'Tu'.",
+      "exp": "Le verbe avoir avec le pronom 'tu' s'écrit 'as'."
+    },
+    {
+      "id": 5,
+      "text": "La maîtresse [GAP] très gentille avec les élèves.",
+      "options": ["est", "sommes", "suis", "êtes", "sont"],
+      "ans": "est",
+      "hint": "Le sujet 'La maîtresse' correspond à 'elle'.",
+      "exp": "Le verbe être au présent avec 'elle' est 'est'."
+    },
+    {
+      "id": 6,
+      "text": "Nous [GAP] un contrôle de mathématiques aujourd'hui.",
+      "options": ["avons", "avez", "ont", "as", "ai"],
+      "ans": "avons",
+      "hint": "Regarde le pronom 'Nous'.",
+      "exp": "Le verbe avoir avec 'nous' s'écrit 'avons'."
+    },
+    {
+      "id": 7,
+      "text": "Les devoirs [GAP] faciles à faire ce soir.",
+      "options": ["sont", "est", "suis", "sommes", "êtes"],
+      "ans": "sont",
+      "hint": "Le sujet 'Les devoirs' est au pluriel (ils).",
+      "exp": "Avec un sujet au pluriel (ils), le verbe être est 'sont'."
+    },
+    {
+      "id": 8,
+      "text": "Vous [GAP] un livre de lecture sur votre table.",
+      "options": ["avez", "avons", "ai", "ont", "as"],
+      "ans": "avez",
+      "hint": "Regarde le pronom 'Vous'.",
+      "exp": "Le verbe avoir avec le pronom 'vous' est 'avez'."
+    },
+    {
+      "id": 9,
+      "text": "Est-ce

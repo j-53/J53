@@ -1,0 +1,145 @@
+{
+  "title": "La conjugaison au potager - Verbes Être et Avoir au présent (A1)",
+  "questions": [
+    {
+      "id": 1,
+      "text": "La limace [GAP] très lente sur la feuille de salade.",
+      "ans": "est",
+      "hint": "Le sujet 'La limace' est au singulier (elle). Verbe être.",
+      "exp": "Avec 'elle', le verbe être au présent s'écrit 'est'."
+    },
+    {
+      "id": 2,
+      "text": "Les coccinelles [GAP] des taches noires sur les ailes.",
+      "ans": "ont",
+      "hint": "Le sujet 'Les coccinelles' est au pluriel (elles). Verbe avoir.",
+      "exp": "Avec 'elles', le verbe avoir au présent s'écrit 'ont'."
+    },
+    {
+      "id": 3,
+      "text": "Je [GAP] attentif pour ne pas écraser les vers de terre.",
+      "ans": "suis",
+      "hint": "Pronom 'Je'. Verbe être.",
+      "exp": "Avec 'je', le verbe être au présent s'écrit 'suis'."
+    },
+    {
+      "id": 4,
+      "text": "Tu [GAP] une belle chenille verte sur la tige.",
+      "ans": "as",
+      "hint": "Pronom 'Tu'. Verbe avoir.",
+      "exp": "Avec 'tu', le verbe avoir au présent s'écrit 'as'."
+    },
+    {
+      "id": 5,
+      "text": "Le crapaud [GAP] caché sous une grosse pierre.",
+      "ans": "est",
+      "hint": "Le sujet 'Le crapaud' correspond à 'il'. Verbe être.",
+      "exp": "Avec 'il', le verbe être au présent s'écrit 'est'."
+    },
+    {
+      "id": 6,
+      "text": "Nous [GAP] de la chance de voir une libellule.",
+      "ans": "avons",
+      "hint": "Pronom 'Nous'. Verbe avoir.",
+      "exp": "Avec 'nous', le verbe avoir au présent s'écrit 'avons'."
+    },
+    {
+      "id": 7,
+      "text": "Les abeilles [GAP] très occupées sur les fleurs de courgettes.",
+      "ans": "sont",
+      "hint": "Le sujet 'Les abeilles' est au pluriel (elles). Verbe être.",
+      "exp": "Avec 'elles', le verbe être au présent s'écrit 'sont'."
+    },
+    {
+      "id": 8,
+      "text": "Vous [GAP] un petit hérisson près de la haie.",
+      "ans": "avez",
+      "hint": "Pronom 'Vous'. Verbe avoir.",
+      "exp": "Avec 'vous', le verbe avoir au présent s'écrit 'avez'."
+    },
+    {
+      "id": 9,
+      "text": "Est-ce que tu [GAP] doux avec les papillons ?",
+      "ans": "es",
+      "hint": "Pronom 'tu'. Verbe être.",
+      "exp": "Avec 'tu', le verbe être au présent s'écrit 'es'."
+    },
+    {
+      "id": 10,
+      "text": "On [GAP] surpris de trouver un lézard au soleil.",
+      "ans": "est",
+      "hint": "Pronom 'On' (comme 'il'). Verbe être.",
+      "exp": "Avec 'on', le verbe être au présent s'écrit 'est'."
+    },
+    {
+      "id": 11,
+      "text": "J'[GAP] un bel hôtel à insectes au fond du potager.",
+      "ans": "ai",
+      "hint": "Pronom 'J''. Verbe avoir.",
+      "exp": "Avec 'J'', le verbe avoir au présent s'écrit 'ai'."
+    },
+    {
+      "id": 12,
+      "text": "Les fourmis [GAP] beaucoup de travail sous terre.",
+      "ans": "ont",
+      "hint": "Le sujet 'Les fourmis' est au pluriel (elles). Verbe avoir.",
+      "exp": "Avec 'elles', le verbe avoir au présent s'écrit 'ont'."
+    },
+    {
+      "id": 13,
+      "text": "Vous [GAP] contents de protéger les oiseaux du jardin.",
+      "ans": "êtes",
+      "hint": "Pronom 'Vous'. Verbe être.",
+      "exp": "Avec 'vous', le verbe être au présent s'écrit 'êtes'."
+    },
+    {
+      "id": 14,
+      "text": "Nous [GAP] calmes pour observer la sauterelle.",
+      "ans": "sommes",
+      "hint": "Pronom 'Nous'. Verbe être.",
+      "exp": "Avec 'nous', le verbe être au présent s'écrit 'sommes'."
+    },
+    {
+      "id": 15,
+      "text": "Les escargots [GAP] de belles coquilles grises.",
+      "ans": "ont",
+      "hint": "Le sujet 'Les escargots' est au pluriel (ils). Verbe avoir.",
+      "exp": "Avec 'ils', le verbe avoir au présent s'écrit 'ont'."
+    },
+    {
+      "id": 16,
+      "text": "Tu [GAP] patient pour regarder les abeilles travailler.",
+      "ans": "es",
+      "hint": "Pronom 'Tu'. Verbe être.",
+      "exp": "Avec 'tu', le verbe être au présent s'écrit 'es'."
+    },
+    {
+      "id": 17,
+      "text": "Le ver de terre [GAP] très utile pour le sol.",
+      "ans": "est",
+      "hint": "Le sujet 'Le ver de terre' est au singulier (il). Verbe être.",
+      "exp": "Avec 'il', le verbe être au présent s'écrit 'est'."
+    },
+    {
+      "id": 18,
+      "text": "Les pucerons [GAP] peur des coccinelles.",
+      "ans": "ont",
+      "hint": "Le sujet 'Les pucerons' est au pluriel (ils). Verbe avoir.",
+      "exp": "Avec 'ils', le verbe avoir au présent s'écrit 'ont'."
+    },
+    {
+      "id": 19,
+      "text": "C'[GAP] un joli papillon jaune.",
+      "ans": "est",
+      "hint": "'C'' fonctionne comme 'il'. Verbe être.",
+      "exp": "Avec 'C'', le verbe être s'écrit 'est'."
+    },
+    {
+      "id": 20,
+      "text": "Nous [GAP] de l'eau fraîche pour les petits oiseaux.",
+      "ans": "avons",
+      "hint": "Pronom 'Nous'. Verbe avoir.",
+      "exp": "Avec 'nous', le verbe avoir au présent s'écrit 'avons'."
+    }
+  ]
+}
